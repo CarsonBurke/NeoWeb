@@ -1,6 +1,6 @@
+import { unveiler } from "./unveiler/unveiler";
+
 export function main() {
 
-console.log('hello my world')
+    unveiler.init()
 }
-
-main()                                  

@@ -1,5 +1,7 @@
+
+
 export const animations = {
-    show(element: HTMLElement) {
+    show(element: HTMLElement, ) {
 
 
     },
@@ -7,5 +9,5 @@ export const animations = {
 
 
     },
-    
 }
+

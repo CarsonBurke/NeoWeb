@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { Home } from './pages/Home';
 import './styles/main.css'
 import { RouterProvider, createBrowserRouter, useLocation } from 'react-router-dom';
 import { PageEditor } from './pages/editor/PageEditor';
 import { initLoad } from './scripts/init';
-import { pageInit } from './scripts/pageInit';
+import { Error } from './pages/Error';
+import { main } from './scripts/main';
+
+main()
 
 export default class App extends Component {
 
@@ -48,12 +51,12 @@ const customRouter = createBrowserRouter([
       path: '/',
       element: <Home />,
       loader,
+      ErrorBoundary: Error,
   },
   {
       path: 'pageEditor',
       element: <PageEditor />,
       loader,
+      ErrorBoundary: Error,
   },
 ])
-
-const location = useLocation()
